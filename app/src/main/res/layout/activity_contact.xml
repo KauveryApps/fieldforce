@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UseronlyAccess.contact.ContactActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/backarrow"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/backarrow"/>
+        <TextView
+            android:id="@+id/toolbar_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:text="CONTACT"/>
+        <ImageView
+            android:id="@+id/viewlist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:adjustViewBounds="true"
+            android:textStyle="bold"
+            android:src="@drawable/viewlist"/>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="56dp"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:id="@+id/layoutone"
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Contact Type *"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content" />
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/contacttype"
+                            android:layout_below="@+id/corpaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Contact Type" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/layouttwo"
+                        android:layout_below="@+id/layoutone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="Salutation"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content"/>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/salutation"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Salutation" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layoutthree"
+                        android:layout_below="@+id/layouttwo"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:text="Contact Name *"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <EditText
+                            android:id="@+id/contactname"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            android:hint="   Contact Name *" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layoutfour"
+                        android:layout_below="@+id/layoutthree"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Corporate Name *"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/corporatename"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select Corporate Name" />
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/ambulancename"
+                        android:layout_below="@+id/layoutfour"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        android:hint="   Ambulance Name" />
+                    <EditText
+                        android:id="@+id/specialization"
+                        android:layout_below="@+id/ambulancename"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        android:hint="   Specialization" />
+                    <EditText
+                        android:id="@+id/portfolio"
+                        android:layout_below="@+id/specialization"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        android:hint="   portfolio" />
+                    <EditText
+                        android:id="@+id/regno"
+                        android:layout_below="@+id/portfolio"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        android:hint="   Reg no" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/addresslayout"
+                        android:orientation="vertical"
+
+                        android:layout_below="@+id/regno"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="Address *"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <EditText
+                            android:id="@+id/address"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            android:hint="   Address" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/layoutfive"
+                        android:layout_below="@id/addresslayout"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="State *"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/state"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/edittext"
+                            app:hintText="Select State" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/six"
+                        android:layout_below="@id/layoutfive"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:text="city *"
+                            android:layout_marginLeft="16dp"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+                        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                            android:id="@+id/city"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            app:hintText="Select City"
+                            android:background="@drawable/edittext"
+                            android:layout_margin="12dp"
+                            />
+                    </LinearLayout>
+
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/area"
+                        android:layout_below="@+id/six"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        app:hintText="Select Area"/>
+                    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                        android:id="@+id/pincode"
+                        android:layout_below="@+id/area"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:background="@drawable/edittext"
+                        app:hintText="Select Pincode" />
+                    <EditText
+                        android:id="@+id/phoneno"
+                        android:layout_below="@+id/pincode"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="12dp"
+                        android:inputType="number"
+                        android:background="@drawable/edittext"
+                        android:hint="   Phone No" />
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_below="@+id/phoneno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:padding="18dp"
+                        android:text="Active"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:padding="16dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnSaveContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rounded_gradient_button"
+                        android:fontFamily="@font/robotoregular"
+                        android:gravity="center"
+
+                        android:text="Save"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

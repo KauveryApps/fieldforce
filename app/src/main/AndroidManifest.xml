@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kauveryhospital.fieldforce">
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/kauverys"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/kauverys"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".UserAdmin.corporateadmin.CorpActivityAdmin"></activity>
+        <activity android:name=".UserAdmin.checkoutadmin.CheckoutActivityadmin" />
+        <activity android:name=".UserAdmin.unplanvisitAdmin.unplannedvisit" />
+        <activity android:name=".UserAdmin.LeaveApprovedAdmin.LeaveApprovingActivityAdmin" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".UserAdmin.MapsActivityAdmin"
+            android:label="@string/title_activity_maps_admin" />
+        <activity android:name=".UserAdmin.contactadmin.UpdateActivityadmin" />
+        <activity android:name=".UserAdmin.contactadmin.ContactActivityadmin" />
+        <activity android:name=".UserAdmin.corporateadmin.CorporateActivityadmin" />
+        <activity android:name=".UseronlyAccess.travelExpenses.ListTravelExpensesActivity" />
+        <activity android:name=".UseronlyAccess.travelExpenses.TravelExpActivity" />
+        <activity android:name=".UseronlyAccess.unplanned.UnPlannedActivity" />
+        <activity android:name=".UseronlyAccess.leaverequest.CancelRequestActivity" />
+        <activity android:name=".UseronlyAccess.leaverequest.LeaveRequestActivity" />
+        <activity android:name=".UseronlyAccess.contact.ListContactActivity" />
+        <activity android:name=".UseronlyAccess.contact.ContactActivity" />
+        <activity android:name=".UseronlyAccess.planned.CheckoutActivity" />
+        <activity android:name=".UseronlyAccess.corporate.ListCorporateActivity" />
+        <activity android:name=".UseronlyAccess.corporate.CorporateActivity" />
+        <activity
+            android:name=".TabbedActivity"
+            android:label="@string/title_activity_tabbed"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".workstartserviceuseronly.WorkStartActivity"
+            android:label="@string/title_activity_work_start" />
+        <activity android:name=".Loginscreen.LoginActivity" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".workstartserviceuseronly.MyBackgroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location"
+            android:stopWithTask="false" />
+        <receiver android:enabled="true" android:name="com.robertohuertas.endless.StartReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.robertohuertas.endless.EndlessService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+    </application>
+
+</manifest>
